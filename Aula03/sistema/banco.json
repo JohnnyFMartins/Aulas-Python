@@ -1,0 +1,16 @@
+{
+    "clientes": [
+        {
+            "nome": "johnny",
+            "email": "johnny@email.com",
+            "idade": 40
+        }
+    ],
+    "produtos": [
+        {
+            "nome": "celular",
+            "Preco": 3000.0,
+            "quantidade": 10
+        }
+    ]
+}
