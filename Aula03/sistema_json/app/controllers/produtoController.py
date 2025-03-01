@@ -8,7 +8,8 @@ class produtoController:
 
     def criar_produto(self, nome, preco, quantidade):
         # Criar o objeto cliente  salvar no banco
-        novo_produto = Produto(nome, preco, quantidade)
+        novo_id = self.db.gerar_id_produto()
+        novo_produto = Produto(novo_id, nome, preco, quantidade)
         # converter para dict (JSON)
         dict_produto = {
             "nome": novo_produto.nome,

@@ -8,7 +8,8 @@ class clienteController:
 
     def criar_cliente(self, nome, email, idade):
         # Criar o objeto cliente  salvar no banco
-        novo_cliente = Cliente(nome, email, idade)
+        novo_id = self.db.gerar_id_cliente()
+        novo_cliente = Cliente(novo_id, nome, email, idade)
         # converter para dict (JSON)
         dict_cliente = {
             "nome": novo_cliente.nome,

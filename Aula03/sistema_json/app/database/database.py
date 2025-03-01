@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path # lidar com caminhos do WIN
 
 class bancoFake:
@@ -42,3 +43,23 @@ class bancoFake:
 
     def listar_produtos(self):
         return self.dados["produtos"]
+
+    """ def _gerar_id(self, cliente):
+        with open(self.arquivo_json, 'r+') as f:
+            dados = json.load(f)
+            novo_id = dados[cliente]["ultimo_id"] + 1
+            dados[cliente]["ultimo_id"] = novo_id
+            f.seek(0)
+            json.dump(dados, f, indent=4)
+            f.truncate()
+        return novo_id
+
+    def gerar_id_cliente(self):
+        return self._gerar_id('clientes')
+
+    def gerar_id_produto(self):
+        return self._gerar_id('produtos')
+ """
+
+
+
