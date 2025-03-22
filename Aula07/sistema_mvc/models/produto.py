@@ -1,9 +1,9 @@
 class Produto:
      
     def __init__(self, id=None, nome=None, preco=None):
-          self.id = id
-          self.nome = nome
-          self.preco = preco
+        self.id = id
+        self.nome = nome
+        self.preco = preco
 
 
     @staticmethod # permite varios acessos
@@ -20,7 +20,7 @@ class Produto:
 
     def salvar(self, mysql):
         cursor = mysql.connection.cursor()
-        cursor.execute("INSERT INTO produtos (nome, preco) VALUES (%s, %s)". (self.nome.preco))
+        cursor.execute("INSERT INTO produtos (nome, preco) VALUES (%s, %s)", (self.nome, self.preco))
         mysql.connection.commit()
         cursor.close()
     

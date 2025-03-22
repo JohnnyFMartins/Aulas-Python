@@ -1,7 +1,8 @@
 from flask import Flask
 from flask_mysqldb import MySQL # biblioteca mysql flask
-from contrpllers.produto_controller import produto_bp
 import config
+from controllers.produto_controller import produto_bp
+
 
 app = Flask(__name__) # Intanciar o flask
 app.config.from_object(config) # Configurando variaveis
