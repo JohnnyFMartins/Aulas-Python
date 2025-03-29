@@ -1,5 +1,5 @@
 import mysql.connector
-from config import Config
+from Aula07.sistema_mvc.config import Config
 
 class Produto:
 

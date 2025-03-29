@@ -1,12 +1,12 @@
 from flask import Blueprint, current_app, redirect, render_template, request, url_for
-from sistema_mvc.models.produto import Produto
-from models.produto import produto
+from models.produto import Produto
+
 
 produto_bp = Blueprint('produto', __name__)
 
 @produto_bp.route('/')
 def index():
-    produtos = produto.listar(current_app.mysql)
+    produtos = Produto.listar(current_app.mysql)
     return render_template('index.html', produtos=produtos)
 
 @produto_bp.route('/criar', methods=['GET', 'POST'])
